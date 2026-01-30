@@ -3,11 +3,11 @@
 const CACHE_NAME = 'slicer-cache-v1';
 const TILE_CACHE_NAME = 'slicer-tiles-v1';
 
-// Assets to cache immediately
+// Assets to cache immediately (using relative paths for GitHub Pages compatibility)
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/manifest.json',
+  './',
+  './index.html',
+  './manifest.json',
 ];
 
 // Install event - cache essential assets

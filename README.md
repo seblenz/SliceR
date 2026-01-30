@@ -18,7 +18,7 @@ A Progressive Web App (PWA) for crowdsourcing pizza slice ratings across New Yor
 - **Map**: Leaflet with OpenStreetMap tiles (free, no API key required)
 - **Backend**: Google Sheets API (spreadsheet-based data management)
 - **Image Storage**: Cloudinary (free tier)
-- **Hosting**: Vercel or Netlify (free tier)
+- **Hosting**: GitHub Pages (free)
 
 ## Getting Started
 
@@ -116,6 +116,7 @@ See the full specification in the project documentation for sheet column structu
 
 - `npm start` - Run development server
 - `npm run build` - Build for production
+- `npm run deploy` - Build and deploy to GitHub Pages
 - `npm test` - Run tests
 
 ## Initial Pizza Places
@@ -133,21 +134,25 @@ The app comes pre-seeded with 10 real NYC pizza spots:
 9. Rubirosa (Nolita)
 10. NY Pizza Suprema (Midtown)
 
-## Deployment
+## Deployment to GitHub Pages
 
-### Vercel
+1. Update the `homepage` field in `package.json` to match your GitHub username:
+   ```json
+   "homepage": "https://YOUR_USERNAME.github.io/SliceR"
+   ```
 
-```bash
-npm install -g vercel
-vercel
-```
+2. Deploy to GitHub Pages:
+   ```bash
+   npm run deploy
+   ```
 
-### Netlify
+3. In your GitHub repository settings:
+   - Go to Settings > Pages
+   - Set Source to "Deploy from a branch"
+   - Select the `gh-pages` branch and `/ (root)` folder
+   - Save
 
-```bash
-npm run build
-# Upload the /build folder to Netlify
-```
+Your app will be live at `https://YOUR_USERNAME.github.io/SliceR`
 
 ## License
 
